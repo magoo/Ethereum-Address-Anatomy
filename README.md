@@ -1,7 +1,6 @@
 #Anatomy of an Ethereum Address
 
-This script outputs the step by step creation of an Ethereum address.
-
+This script outputs the step by step creation of an Ethereum address. This is an academic approach, would not advise using this for paper wallets or for actual imports into a wallet. Consider this code very unsafe, especially because of the state of SHA3 dependencies. 
 ##Example Output
 
 1. Private Key (No Hex): 30594893532191419170483904360138267329943395403786937494850298450853451941303
@@ -16,3 +15,6 @@ This script outputs the step by step creation of an Ethereum address.
 See comments regarding the nebulous state of SHA3 and Ethereum. If the following gem is ever updated to the FIPS standard, this script will break.
 
 `gem install digest-sha3`
+
+##Roadmap
+Not going to update this unless a better Keccek-256 gem appears that is designed for Ethereum usage.
