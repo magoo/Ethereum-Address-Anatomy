@@ -35,6 +35,8 @@ puts "3. Public Key (Hex): #{ecdsa_pubkey}"
 #Documentation claims that the whole pubkey is hashed.
 #See: https://github.com/ethereum/go-ethereum/blob/master/crypto/crypto.go#L341
 #This step is also special because we are hashing a hex string, not a string, so we pack('H*') it.
+
+#Additional 'gotcha': Slice bytes off after you've converted the hex string into a proper byte array. Otherwise its a shift(?)
 prehash_ecdsa_pubkey = [ecdsa_pubkey].pack('H*').slice(1,64)
 
 puts "4. Strip leading pubkey byte: #{prehash_ecdsa_pubkey.unpack('H*')[0]}"
