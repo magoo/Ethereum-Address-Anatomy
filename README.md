@@ -1,6 +1,8 @@
 #Anatomy of an Ethereum Address
 
 This script outputs the step by step creation of an Ethereum address. This is an academic approach, would not advise using this for paper wallets or for actual imports into a wallet. Consider this code very unsafe, especially because of the state of SHA3 dependencies. 
+You should be able to `geth account import <file>` with just the private key hex string from line two. I don't recommend this though.
+
 ##Example Output
 
 1. Private Key (No Hex): 30594893532191419170483904360138267329943395403786937494850298450853451941303
